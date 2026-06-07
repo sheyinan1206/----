@@ -1,0 +1,6 @@
+2026-06-07 11:50:28 WARNING -----------------------Start: syn/test_fail.py::test_fail-----------------------
+2026-06-07 11:50:28 WARNING ------------------------End: syn/test_fail.py::test_fail------------------------
+2026-06-07 11:50:28 INFO test status is PASSED (syn/test_fail.py::test_fail): 
+2026-06-07 11:50:28 WARNING --------------------------Start: test_syn.py::test_syn--------------------------
+2026-06-07 11:50:29 WARNING ---------------------------End: test_syn.py::test_syn---------------------------
+2026-06-07 11:50:29 INFO test status is PASSED (test_syn.py::test_syn): 

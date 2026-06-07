@@ -1,5 +1,6 @@
 
 import datetime
+import time
 
 import pytest
 
@@ -17,6 +18,7 @@ def sheyn():
     print('start time',datetime.datetime.now())
 
     #前置操作
+    time.sleep(1)
     yield '我是syn'  #生成器
 
     #后置操作
@@ -41,25 +43,31 @@ class TestUser:
 
         print('xxxx',datetime.datetime.now())
 
+        
+
         #前置操作
+        time.sleep(1)
         yield 'i am syn'  #生成器
 
         #后置操作
         print('xxxx',datetime.datetime.now())
-     
+
+    @pytest.mark.order(1)     
     def test_web(self,sheyn,data):
         print(sheyn)
 
         print('上一个用例传递的内容是：',data['msg'])
         data['msg']= '我是第二个用例'
         print('当前用例传递的内容是：',data['msg'])
-     
+
+    @pytest.mark.order(3)     
     def test_api(self,sheyn,data):
         print(sheyn)
         print('上一个用例传递的内容是：',data['msg'])
         data['msg']= '我是第三个用例'
         print('当前用例传递的内容是：',data['msg'])
 
+    @pytest.mark.order(2)     
     def test_ut(self,sheyn,data):
         print(sheyn)   
         print('上一个用例传递的内容是：',data['msg'])

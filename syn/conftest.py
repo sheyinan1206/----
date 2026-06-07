@@ -1,4 +1,5 @@
 import datetime
+import time
 
 import pytest
 
@@ -9,6 +10,7 @@ def sheyn():
     print('用例开始时间：',datetime.datetime.now())
 
     #前置操作
+    time.sleep(1)
     yield '我是syn'  #生成器
 
     #后置操作
