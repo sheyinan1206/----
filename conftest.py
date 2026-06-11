@@ -10,7 +10,7 @@ def sheyn():
     print('start time',datetime.datetime.now())
 
     #前置操作
-    time.sleep(1)
+    # time.sleep(1)
     yield   #生成器
 
     #后置操作
